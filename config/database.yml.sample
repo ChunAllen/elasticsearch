@@ -1,0 +1,24 @@
+default: &default
+  adapter:  postgresql
+  host:     localhost
+  pool: 5
+  timeout: 5000
+  encoding: UTF8
+  username: <user>
+  password: <password>
+
+development:
+  <<: *default
+  database: elasticsearch_development
+
+test:
+  <<: *default
+  database: elasticsearch_test
+
+production:
+  <<: *default
+  database: elasticsearch_production
+
+
+
+
