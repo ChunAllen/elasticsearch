@@ -16,7 +16,6 @@ gem 'flex-models'
 gem 'flex-admin'
 gem 'rest-client'
 
-gem 'tire'
 
 
 group :development do
