@@ -9,6 +9,15 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
+gem 'flex'
+gem 'flex-rails'
+gem 'flex-scopes'
+gem 'flex-models'
+gem 'flex-admin'
+gem 'rest-client'
+
+gem 'tire'
+
 
 group :development do
   gem "spring"
