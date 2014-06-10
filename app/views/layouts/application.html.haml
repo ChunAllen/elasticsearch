@@ -6,4 +6,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = yield
+    .container
+      .row
+        .col-lg-12
+          .page-header
+            %h1
+              = link_to "Elasticsearch", root_path
+          = yield

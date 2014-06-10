@@ -18,8 +18,9 @@ class UsersController < ApplicationController
     end
   end
 
-
-  def search_users
+  def search
+    @users = UserFlex.query(query: "*#{params[:search_user]}*")
+    render :index
   end
 
 

@@ -1,13 +1,8 @@
-.container
-  .row
-    .col-lg-12
-      .page-header
-        %h1 Elasticsearch
-      %p
-        You can find the source of this plugin at
-  .row
-    .col-lg-4.col-lg-offset-4
-      %input#search.form-control{placeholder: "Search Users", type: "search", value: ""}/
+.row
+.col-lg-4.col-lg-offset-4
+  = form_tag search_users_path, method: :get do
+    = text_field_tag :search_user, nil, placeholder: "Search Users", class: "form-control"
+  %br
   .row
     .col-lg-12
       %table.table

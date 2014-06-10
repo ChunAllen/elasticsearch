@@ -1,9 +1,13 @@
-= form_for @user do |f|
-  .row
-    = f.text_field :name
-  .row
-    = f.text_field :email
-
-  .row
-    = f.submit
-
+.col-md-5.col-md-offset-3
+  .well.well-sm
+    = form_for @user do |f|
+      %fieldset
+      .form-group.row
+        .col-md-12
+          = f.text_field :name, class: 'form-control', placeholder: "Name"
+      .form-group.row
+        .col-md-12
+          = f.text_field :email, class: 'form-control', placeholder: "Email"
+      .form-group.row
+        .col-md-12.text-right
+          = f.submit class: "btn btn-primary"
