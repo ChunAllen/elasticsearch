@@ -1,0 +1,29 @@
+.container
+  .row
+    .col-lg-12
+      .page-header
+        %h1 Elasticsearch
+      %p
+        You can find the source of this plugin at
+  .row
+    .col-lg-4.col-lg-offset-4
+      %input#search.form-control{placeholder: "Search Users", type: "search", value: ""}/
+  .row
+    .col-lg-12
+      %table.table
+        %thead
+          %th ID
+          %th Name
+          %th Email
+        %tbody
+          - @users.each do |u|
+            %tr
+              %td
+                = u.id
+              %td
+                = u.name
+              %td
+                = u.email
+
+
+      = link_to "Create User", new_user_path, class: "btn btn-primary pull-right"

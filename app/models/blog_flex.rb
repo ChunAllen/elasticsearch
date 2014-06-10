@@ -1,8 +1,8 @@
 class BlogFlex
   include Flex::ActiveModel
 
-  flex.type = "user"
-  attribute :name
-  attribute :email
+  flex.type = "blog"
+  attribute :title
+  attribute :content
 
 end

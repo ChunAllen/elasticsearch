@@ -6,7 +6,7 @@ Flex::Configuration.configure do |config|
   config.flex_models = %w[ User Blog]
 
   # you must add your active model names here
-  config.flex_active_models = %w[ BlogFlex ]
+  config.flex_active_models = %w[ BlogFlex UserFlex]
 
   # Add the your result extenders here
   config.result_extenders |= [ FlexSearchExtender ]
