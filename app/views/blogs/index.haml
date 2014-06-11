@@ -1,0 +1,11 @@
+.row
+.col-lg-8.col-lg-offset-4
+  .col-md-6
+    - @blogs.each do |b|
+      .blockquote-box.clearfix
+        .square.pull-left
+          %img{alt: "", src: "http://placehold.it/60/8e44ad/FFF&text=B"}/
+        %h4
+          = b["title"]
+        %p
+          = b["content"]

@@ -1,0 +1,13 @@
+.col-md-5.col-md-offset-3
+  .well.well-sm
+    = form_for [@user, @blog] do |f|
+      %fieldset
+      .form-group.row
+        .col-md-12
+          = f.text_field :title, class: 'form-control', placeholder: "Title"
+      .form-group.row
+        .col-md-12
+          = f.text_area :content, class: 'form-control', placeholder: "Content", cols: "40", rows: "10"
+      .form-group.row
+        .col-md-12.text-right
+          = f.submit class: "btn btn-primary"

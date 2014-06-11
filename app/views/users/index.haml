@@ -10,6 +10,8 @@
           %th ID
           %th Name
           %th Email
+          %th Blog Count
+          %th{colspan: 2} Blogs
         %tbody
           - @users.each do |u|
             %tr
@@ -19,6 +21,15 @@
                 = u.name
               %td
                 = u.email
+              %td
+                = u.blog_count
+              %td
+                = link_to "Create", new_user_blog_path(u.id), class: "btn btn-info btn-small"
+              %td
+                = link_to "View", user_blogs_path(u.id), class: "btn btn-warning btn-small"
+
+
+
 
 
       = link_to "Create User", new_user_path, class: "btn btn-primary pull-right"

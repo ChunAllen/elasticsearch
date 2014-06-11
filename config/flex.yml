@@ -15,4 +15,29 @@ ANCHORS:
     number_of_replicas: 1
 
   # add your custom mappings here
-  mappings: {}
+  mappings: {
+    user: {
+      properties: {
+        name: {
+          type: 'string'
+        },
+        email: {
+          type: 'string'
+        },
+        blogs: {
+          type: 'nested',
+          properties: {
+            title: {
+              type: 'string'
+            },
+            content: {
+              type: 'string'
+            }
+          }
+        },
+        blog_count: {
+          type: 'string'
+        }
+      }
+    }
+  }

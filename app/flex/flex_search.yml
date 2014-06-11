@@ -15,8 +15,14 @@ ANCHORS:
 # see the detailed doc for this feature at http://ddnexus.github.io/flex/doc/2-flex/4-Self-Documentation.html
 
 # the :cleanable_query is a special variable that get cleaned up if contains illegal characters for the Lucene syntax
-search:
+#
+#search:
+#- query:
+    #query_string:
+      #query: <<cleanable_query= "*">>
+
+search_users:
 - query:
     query_string:
-      query: <<cleanable_query= "*">>
+      query: <<name>>
 
